@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaGem, FaBars, FaTimes } from 'react-icons/fa';
 import Button from '../button/Button';
 import './Navbar.css';
+import { IconContext } from 'react-icons/lib';
 
 
 
@@ -27,9 +28,12 @@ window.addEventListener('resize', showButton);
 
     return (
         <>
+        <IconContext.Provider value={{ color: '#fff'}}>
           <div className="navbar">
             <div className="navbar-container container">
-              <Link to='/' className="navbar-logo">
+              <Link to='/' 
+                  className="navbar-logo" 
+                  onClick={closeMobileMenu}>
                 <FaGem className="navbar-icon" />
                 ATHENA
               </Link>
@@ -38,17 +42,17 @@ window.addEventListener('resize', showButton);
               </div>
               <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className="nav-item">
-                  <Link to='/' className="nav-links">
+                  <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/services' className="nav-links">
+                  <Link to='/services' className="nav-links" onClick={closeMobileMenu}>
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/products' className="nav-links">
+                  <Link to='/products' className="nav-links" onClick={closeMobileMenu}> 
                     Products
                   </Link>
                 </li>
@@ -62,7 +66,7 @@ window.addEventListener('resize', showButton);
                     </Link>
                   ) :
                   (
-                    <Link to='/sign-up' className="btn-link">
+                    <Link to='/sign-up' className="btn-link" onClick={closeMobileMenu}>
                       <Button buttonStyle='btn--outline' buttonSize='btn--mobile'>
                         SIGN UP
                       </Button>
@@ -73,6 +77,7 @@ window.addEventListener('resize', showButton);
               </ul>
             </div>
           </div>
+          </IconContext.Provider>
         </>
     )
 }
