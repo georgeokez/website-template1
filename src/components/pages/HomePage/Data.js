@@ -6,7 +6,7 @@ export const homeObjOne = {
     headline: 'Unlimited Transactions with zero fees',
     description: 'Get access to our exclusive diamond card that allows you to send unlimited transactions',
     buttonLabel: 'Get Started',
-    imgStart: '',
+    imgStart: 'right',
     img: 'images/svg-1.svg',
     alt: 'Credit Card'
 }
