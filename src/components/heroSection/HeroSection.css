@@ -9,10 +9,21 @@
 
 .row {
   display: flex;
+  flex-direction:row-reverse;
   margin-right: -15px;
   margin-bottom: -15px;
   margin-left: -15px;
-  flex-wrap: ;
+  flex-wrap: column;
+  align-content: stretch;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction:row;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-left: -15px;
+  flex-wrap: column;
   align-content: stretch;
 }
 
@@ -85,17 +96,35 @@ img {
 
 @media screen and (max-width: 991px) {
   .container {
+    display: flex;
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  .row {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: column;
+    width: 100%;
+  }
+
+  .row-reverse{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: column;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
   .home__hero-text-wrapper {
     padding-bottom: 65px;
+    flex-direction: column;
   }
 
   .col {
+    flex-direction: column;
     max-width: 100%;
     flex-basis: 100%;
   }
