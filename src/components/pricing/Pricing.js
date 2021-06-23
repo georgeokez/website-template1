@@ -16,7 +16,7 @@ function Pricing() {
           <div className='pricing__container'>
             <Link to='/sign-up' className='pricing__container-card'>
               <div className='pricing__container-cardInfo'>
-                <div className='icon'>
+                <div className='icon'> 
                   <FaFire />
                 </div>
                 <h3>Starter</h3>

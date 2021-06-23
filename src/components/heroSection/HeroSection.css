@@ -102,7 +102,7 @@ img {
   }
 
   .row {
-    flex-direction: column;
+    flex-direction: column; 
     display: flex;
     flex-wrap: column;
     width: 100%;
